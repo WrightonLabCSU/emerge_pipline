@@ -2,8 +2,6 @@ import pandas as pd
 from datetime import datetime, date
 import os
 
-print(datetime.strptime(, '%y-%m-%d')).date()
-
 xl = pd.ExcelFile('./emerge_distilled_output/metabolism_summary.xlsx')
 emerge = xl.parse('EMERGE')
 prod = pd.read_csv('./emerge_distilled_output/product.tsv', sep='\t')
