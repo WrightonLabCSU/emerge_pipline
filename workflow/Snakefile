@@ -1,0 +1,6 @@
+o
+configfile: "config/config.yaml"
+rule combine_annotations:
+        input:
+        output:
+        run:
