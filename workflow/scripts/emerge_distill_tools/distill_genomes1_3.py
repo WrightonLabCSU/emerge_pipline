@@ -4,7 +4,6 @@ from itertools import tee
 import re
 import pandas as pd
 from collections import Counter, defaultdict
-import altair as alt
 import networkx as nx
 import numpy as np
 from datetime import datetime
@@ -268,23 +267,6 @@ def make_module_coverage_frame(annotations, module_nets, groupby_column='fasta')
     return module_coverage.reset_index()
 
 
-def make_module_coverage_heatmap(module_coverage, mag_order=None):
-    num_mags_in_frame = len(set(module_coverage['genome']))
-    c = alt.Chart(module_coverage, title='Module').encode(
-        x=alt.X('module_name', title=None, sort=None, axis=alt.Axis(labelLimit=0, labelAngle=90)),
-        y=alt.Y('genome', title=None, sort=mag_order, axis=alt.Axis(labelLimit=0)),
-        tooltip=[alt.Tooltip('genome', title='Genome'),
-                 alt.Tooltip('module_name', title='Module Name'),
-                 alt.Tooltip('steps', title='Module steps'),
-                 alt.Tooltip('steps_present', title='Steps present')
-                 ]
-    ).mark_rect().encode(color=alt.Color('step_coverage', legend=alt.Legend(title='% Complete'),
-                                         scale=alt.Scale(domain=(0, 1)))).properties(
-        width=HEATMAP_CELL_WIDTH * len(HEATMAP_MODULES),
-        height=HEATMAP_CELL_HEIGHT * num_mags_in_frame)
-    return c
-
-
 def pairwise(iterable):
     """s -> (s0,s1), (s1,s2), (s2, s3), ..."""
     a, b = tee(iterable)
@@ -392,31 +374,6 @@ def make_etc_coverage_df(etc_module_database, annotations, groupby_column='fasta
     return pd.DataFrame(etc_coverage_df_rows, columns=ETC_COVERAGE_COLUMNS)
 
 
-def make_etc_coverage_heatmap(etc_coverage, mag_order=None, module_order=None):
-    num_mags_in_frame = len(set(etc_coverage['genome']))
-    charts = list()
-    for i, (etc_complex, frame) in enumerate(etc_coverage.groupby('complex')):
-        # if this is the first chart then make y-ticks otherwise none
-        c = alt.Chart(frame, title=etc_complex).encode(
-            x=alt.X('module_name', title=None, axis=alt.Axis(labelLimit=0, labelAngle=90),
-                    sort=module_order),
-            y=alt.Y('genome', axis=alt.Axis(title=None, labels=False, ticks=False), sort=mag_order),
-            tooltip=[alt.Tooltip('genome', title='Genome'),
-                     alt.Tooltip('module_name', title='Module Name'),
-                     alt.Tooltip('path_length', title='Module Subunits'),
-                     alt.Tooltip('path_length_coverage', title='Subunits present'),
-                     alt.Tooltip('genes', title='Genes present'),
-                     alt.Tooltip('missing_genes', title='Genes missing')
-                     ]
-        ).mark_rect().encode(color=alt.Color('percent_coverage', legend=alt.Legend(title='% Complete'),
-                                             scale=alt.Scale(domain=(0, 1)))).properties(
-            width=HEATMAP_CELL_WIDTH * len(set(frame['module_name'])),
-            height=HEATMAP_CELL_HEIGHT * num_mags_in_frame)
-        charts.append(c)
-    concat_title = alt.TitleParams('ETC Complexes', anchor='middle')
-    return alt.hconcat(*charts, spacing=5, title=concat_title)
-
-
 def make_functional_df(annotations, function_heatmap_form, groupby_column='fasta'):
     # clean up function heatmap form
     function_heatmap_form = function_heatmap_form.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
@@ -447,45 +404,6 @@ def make_functional_df(annotations, function_heatmap_form, groupby_column='fasta
                                                                              'category_function_name'])
 
 
-def make_functional_heatmap(functional_df, mag_order=None):
-    # build heatmaps
-    charts = list()
-    for i, (group, frame) in enumerate(functional_df.groupby('category', sort=False)):
-        # set variables for chart
-        function_order = get_ordered_uniques(list(frame.function_name))
-        num_mags_in_frame = len(set(frame['genome']))
-        chart_width = HEATMAP_CELL_WIDTH * len(function_order)
-        chart_height = HEATMAP_CELL_HEIGHT * num_mags_in_frame
-        # if this is the first chart then make y-ticks otherwise none
-        if i == 0:
-            y = alt.Y('genome', title=None, sort=mag_order,
-                      axis=alt.Axis(labelLimit=0, labelExpr="replace(datum.label, /_\d*$/gi, '')"))
-        else:
-            y = alt.Y('genome', axis=alt.Axis(title=None, labels=False, ticks=False), sort=mag_order)
-        # set up colors for chart
-        rect_colors = alt.Color('present',
-                                legend=alt.Legend(title="Function is Present", symbolType='square',
-                                                  values=[True, False]),
-                                sort=[True, False],
-                                scale=alt.Scale(range=['#2ca25f', '#e5f5f9']))
-        # define chart
-        # TODO: Figure out how to angle title to take up less space
-        c = alt.Chart(frame, title=alt.TitleParams(group)).encode(
-            x=alt.X('function_name', title=None, axis=alt.Axis(labelLimit=0, labelAngle=90), sort=function_order),
-            tooltip=[alt.Tooltip('genome', title='Genome'),
-                     alt.Tooltip('category', title='Category'),
-                     alt.Tooltip('subcategory', title='Subcategory'),
-                     alt.Tooltip('function_ids', title='Function IDs'),
-                     alt.Tooltip('function_name', title='Function'),
-                     alt.Tooltip('long_function_name', title='Description'),
-                     alt.Tooltip('gene_symbol', title='Gene Symbol')]
-        ).mark_rect().encode(y=y, color=rect_colors).properties(
-            width=chart_width,
-            height=chart_height)
-        charts.append(c)
-    # merge and return
-    function_heatmap = alt.hconcat(*charts, spacing=5)
-    return function_heatmap
 
 
 # TODO: refactor this to handle splitting large numbers of genomes into multiple heatmaps here
@@ -508,16 +426,6 @@ def rename_genomes_to_taxa(function_df, labels, mag_order):
     mag_order = [labels[i] for i in mag_order]
     return function_df, mag_order
 
-
-def make_liquor_heatmap(module_coverage_frame, etc_coverage_df, function_df, mag_order=None, labels=None):
-    module_coverage_heatmap = make_module_coverage_heatmap(module_coverage_frame, mag_order)
-    etc_heatmap = make_etc_coverage_heatmap(etc_coverage_df, mag_order=mag_order)
-    if labels is not None:
-        function_df, mag_order = rename_genomes_to_taxa(function_df, labels, mag_order)
-    function_heatmap = make_functional_heatmap(function_df, mag_order)
-
-    liquor = alt.hconcat(alt.hconcat(module_coverage_heatmap, etc_heatmap), function_heatmap)
-    return liquor
 
 
 def make_liquor_df(module_coverage_frame, etc_coverage_df, function_df):
@@ -698,9 +606,6 @@ def distill_genomes(input_file:str, trna_path:str=None, rrna_path:str=None,
             module_coverage_dfs.append(module_coverage_df_subset)
             etc_coverage_dfs.append(etc_coverage_df_subset)
             function_dfs.append(function_df_subset)
-            liquor = make_liquor_heatmap(module_coverage_df_subset, etc_coverage_df_subset, function_df_subset,
-                                         genomes, labels)
-            liquor.save(path.join(output_dir, 'product_%s.html' % i))
         liquor_df = make_liquor_df(pd.concat(module_coverage_dfs), pd.concat(etc_coverage_dfs), pd.concat(function_dfs))
         liquor_df.to_csv(path.join(output_dir, 'product.tsv'), sep='\t')
     else:
@@ -710,8 +615,6 @@ def distill_genomes(input_file:str, trna_path:str=None, rrna_path:str=None,
                                                                            groupby_column=groupby_column)
         liquor_df = make_liquor_df(module_coverage_df, etc_coverage_df, function_df)
         liquor_df.to_csv(path.join(output_dir, 'product.tsv'), sep='\t')
-        liquor = make_liquor_heatmap(module_coverage_df, etc_coverage_df, function_df, genome_order, labels)
-        liquor.save(path.join(output_dir, 'product.html'))
     print('%s: Generated product heatmap and table' % (str(datetime.now() - start_time)))
     print("%s: Completed distillation" % str(datetime.now() - start_time))
 

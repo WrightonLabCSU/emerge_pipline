@@ -1,6 +1,127 @@
-o
+
 configfile: "config/config.yaml"
+
+import os
+from datetime import datetime, date
+import pandas as pd
+import numpy as np
+
+DATE = str(date.today().strftime('%d%m%y'))
+
+import re
+
+rule all:
+    input:
+        f"results/EMERGE_{DATE}_distillate.tsv",
+        f"results/EMERGE_{DATE}_product.tsv",
+        f"results/EMERGE_{DATE}_product_refined.tsv"
+
+
+rule refine_product:
+    input:
+        "resources/pathways_refined.tsv",
+        "resources/custom_input_modules/EMERGE_pathways_module.tsv",
+        f"results/EMERGE_{DATE}_distillate.tsv"
+    output:
+        f"results/EMERGE_{DATE}_product_refined.tsv"
+    threads: 30
+    shell:
+       """
+       python3 ./graph_parser.py \\
+           -p {input[0]} \\
+           -r {input[1]} \\
+           -d {input[2]} \\
+               evaluate  \\
+                  -o {output[0]}
+                  -t {threads}
+       """
+
+
+rule make_custom_sheets:
+    input:
+        "resources/from_emerge_team/metabolic_reactions_updatedwithDRAMinfo.ods",
+    output:
+        "resources/custom_input_modules/EMERGE_distillate_module.tsv",
+        "resources/custom_input_modules/EMERGE_pathways_module.tsv"
+    run:
+        rawpaths = pd.read_excel(input[0],
+                        sheet_name='metabolic_reactions_updatedwith',
+                        engine='odf')
+        ko_ids = set([j for i in rawpaths['definition'].values for j in re.findall('K\d\d\d\d\d', i)])
+        kopaths = pd.DataFrame({j:i for _, i in rawpaths.iterrows() for j in re.findall('K\d\d\d\d\d', i['definition'])}).T
+        #Take the fist instance where the ko is in the path
+        kopaths = kopaths.groupby(by=kopaths.index).first()
+
+        emerge_distilate = pd.DataFrame({
+            "gene_id":kopaths.index,
+            "gene_description": ['EMERGE' for i in kopaths.index],
+            "module": kopaths["pathway"].astype(str) + '_' + kopaths["reaction"].astype(str),
+            "sheet": ['EMERGE' for i in kopaths.index],
+            "header": ['Emerge' for i in kopaths.index],
+            "subheader": kopaths["substrate_names"] + '->' + kopaths["product_names"],
+            "potential_amg": [False for i in kopaths.index]
+        })
+
+        emerge_distilate.to_csv(output[0], sep='\t', index=False)
+        emerge_paths = pd.DataFrame({
+            "module_id": ['EMERGE' + str(i) for i in rawpaths.index],
+            "module_name": rawpaths["substrate_names"] + '->' + rawpaths["product_names"] + ' -' + rawpaths['reaction'].astype(str),
+            "complex": rawpaths["pathway"],
+            "definition": rawpaths['definition']
+        })
+
+        len(emerge_paths['module_id'])
+        len(emerge_paths['module_id'].unique())
+        emerge_paths.to_csv(output[1], sep='\t', index=False)
+
+
+rule filter_distilled:
+    input:
+        "results/emerge_distilled/metabolism_summary.xls",
+        'results/emerge_distilled/product.tsv',
+        'resources/custom_input_modules/EMERGE_pathways_module.tsv'
+    output:
+        f"results/EMERGE_{DATE}_distillate.tsv",
+        f"results/EMERGE_{DATE}_product.tsv"
+    run:
+        xl = pd.ExcelFile(input[0])
+        emerge = xl.parse('EMERGE')
+        prod = pd.read_csv(input[1], sep='\t')
+        path = pd.read_csv(input[2], sep='\t')
+        cols = ['genome'] + [f"Complex {i}: {j}" for i, j in
+            zip(path['complex'].values, path['module_name'].values)]
+        if not len(set(cols) - set([i for i in prod.columns])) == 0:
+            raise ValueError("Your column names are wrong")
+        emerge.to_csv(output[0], sep='\t', index=False)
+        prod[cols].to_csv(output[1], sep='\t', index=False)
+
+
+rule dram_emerge_distill:
+    input:
+       "results/all_annotatons.tsv"
+    output:
+        temp(directory("results/emerge_distilled")),
+        temp("results/emerge_distilled/metabolism_summary.xls"),
+        temp('results/emerge_distilled/product.tsv')
+    shell:
+        """
+        python3 ./scripts/emerge_distill_tools/distill_genomes{config[dram_to_use]}.py \\
+            -i {input} \\
+            -o {output[0]} \\
+            --replace_forms \\
+            --custom_distillate ./custom_input_modules/EMERGE_distillate_module.tsv \\
+            --custom_pathways ./custom_input_modules/EMERGE_pathways_module.tsv
+        """
+
+
 rule combine_annotations:
-        input:
-        output:
-        run:
+    input:
+        config['annotations']
+    output:
+        "results/all_annotatons.tsv"
+    run:
+        anno_dfs = [pd.read_csv(i, sep='\t', index_col=0) for i in input]
+        all_annotatons = pd.concat(anno_dfs)
+        if not np.all([i.columns == j.columns for i in anno_dfs for j in anno_dfs]):
+            raise ValueError("Something wrong with the annotations")
+        all_annotatons.to_csv(output[0], sep='\t')

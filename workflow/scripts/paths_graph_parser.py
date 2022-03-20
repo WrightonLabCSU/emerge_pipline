@@ -380,8 +380,10 @@ def check_rules(args, reactn, dist):
 
 @met_paths.command()
 @click.pass_context
-def evaluate(ctx):
-    pool = Pool(8)
+@click.option('-o', '--output', type=click.Path(exists=False))
+@click.option('-t', '--threads', type=int)
+def evaluate(ctx, output:str, threads:int):
+    pool = Pool(threads)
     pathwy, reactn, dist = ctx.obj['DATA']
     results = (
         pd.concat(
@@ -394,8 +396,8 @@ def evaluate(ctx):
         )
     .reset_index()
     .groupby(['path', 'genome'])['value'].max().unstack()
+    .to_csv(output)
     )
-    results.to_csv("")
     # results = [partial(check_rules, reactn=reactn, dist=dist)((row, col))
     #            for _, row in pathwy.iterrows() for col in dist.columns]
 
