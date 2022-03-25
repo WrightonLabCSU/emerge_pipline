@@ -2,7 +2,7 @@ import altair as alt
 import pandas as pd
 
 
-product_refied = pd.read_csv('results/emerge_distilled_filtered/EMERGE_170222_product_refined.tsv', sep='\t', index_col=0)
+product_refied = pd.read_csv('results/EMERGE_250322_product_refined.tsv', sep='\t', index_col=0)
 product_refied.shape
 product_refied_sum = pd.DataFrame(product_refied.apply(sum, axis=1), columns=['sum']).reset_index()
 product_refied_sum.rename(columns={"index":"reaction"}, inplace=True)
@@ -26,7 +26,7 @@ text = bars.mark_text(
 )
 
 alt.renderers.enable('altair_viewer')
-bars.save('product_refined_prevalance_bars.jpg')
+bars.save('product_refined_prevalance_bars.html')
 bars.show()
 
 alt.renderers.enable('mimetype')

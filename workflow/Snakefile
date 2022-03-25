@@ -24,15 +24,15 @@ rule refine_product:
         f"results/EMERGE_{DATE}_distillate.tsv"
     output:
         f"results/EMERGE_{DATE}_product_refined.tsv"
-    threads: 30
+    threads: workflow.cores 
     shell:
        """
-       python3 ./graph_parser.py \\
+       python3 workflow/scripts/paths_graph_parser.py \\
            -p {input[0]} \\
            -r {input[1]} \\
            -d {input[2]} \\
                evaluate  \\
-                  -o {output[0]}
+                  -o {output[0]}  \\
                   -t {threads}
        """
 
@@ -77,7 +77,7 @@ rule make_custom_sheets:
 
 rule filter_distilled:
     input:
-        "results/emerge_distilled/metabolism_summary.xls",
+        "results/emerge_distilled/metabolism_summary.xlsx",
         'results/emerge_distilled/product.tsv',
         'resources/custom_input_modules/EMERGE_pathways_module.tsv'
     output:
@@ -98,19 +98,19 @@ rule filter_distilled:
 
 rule dram_emerge_distill:
     input:
-       "results/all_annotatons.tsv"
+       "results/all_annotations.tsv"
     output:
-        temp(directory("results/emerge_distilled")),
-        temp("results/emerge_distilled/metabolism_summary.xls"),
-        temp('results/emerge_distilled/product.tsv')
+        directory("results/emerge_distilled"),
+        "results/emerge_distilled/metabolism_summary.xlsx",
+        'results/emerge_distilled/product.tsv'
     shell:
         """
-        python3 ./scripts/emerge_distill_tools/distill_genomes{config[dram_to_use]}.py \\
+        python3 workflow/scripts/emerge_distill_tools/distill_genomes{config[dram_to_use]}.py \\
             -i {input} \\
             -o {output[0]} \\
             --replace_forms \\
-            --custom_distillate ./custom_input_modules/EMERGE_distillate_module.tsv \\
-            --custom_pathways ./custom_input_modules/EMERGE_pathways_module.tsv
+            --custom_distillate resources/custom_input_modules/EMERGE_distillate_module.tsv \\
+            --custom_pathways resources/custom_input_modules/EMERGE_pathways_module.tsv
         """
 
 
@@ -118,10 +118,10 @@ rule combine_annotations:
     input:
         config['annotations']
     output:
-        "results/all_annotatons.tsv"
+        "results/all_annotations.tsv"
     run:
         anno_dfs = [pd.read_csv(i, sep='\t', index_col=0) for i in input]
-        all_annotatons = pd.concat(anno_dfs)
+        all_annotations = pd.concat(anno_dfs)
         if not np.all([i.columns == j.columns for i in anno_dfs for j in anno_dfs]):
             raise ValueError("Something wrong with the annotations")
-        all_annotatons.to_csv(output[0], sep='\t')
+        all_annotations.to_csv(output[0], sep='\t')

@@ -1,2 +1,14 @@
 # emerge_pipline
-The pipline for the folks at emerge, they will want it eventualy
+The pipline for the folks at emerge, they will want it eventually. I know this read me is short, and it would be nice to fix that, but this Snake make pipeline is mostly self explanatory. 
+
+## How to Run
+
+ * It will help if you know Snakemake, so look up the "Read The Docks" for Snakemake, download and install it.
+ * Open the config in `config/config.yaml` and add in the paths To your DRAM annotations you want to distill.
+ * Run something like `snakemake -j 30` and you are good to go.
+
+Sorry this pipeline is not setup for slurm but it should be fast anyway.
+
+## TODO
+ * Finish the read me
+ * add other things to the todo list
