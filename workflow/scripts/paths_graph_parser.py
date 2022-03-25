@@ -437,7 +437,7 @@ def evaluate(ctx, output:str, threads:int):
             [col for _, col in distillate.iteritems()]
         ), axis=1).T
     results.index.name = 'genome'
-    results.T.to_csv(output, sep="\t")
+    results.to_csv(output, sep="\t")
 
 
 @met_paths.command()
