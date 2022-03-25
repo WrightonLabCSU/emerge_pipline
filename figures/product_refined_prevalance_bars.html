@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-e08b376b1cf30669182837d94ab42501"}, "mark": "bar", "encoding": {"x": {"type": "quantitative", "field": "sum"}, "y": {"type": "nominal", "field": "reaction"}}, "height": 900, "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-e08b376b1cf30669182837d94ab42501": [{"reaction": "nitrogen_redox-nitrate_reduction", "sum": 94}, {"reaction": "nitrogen_redox-denitrification", "sum": 87}, {"reaction": "nitrogen_redox-anammox", "sum": 0}, {"reaction": "nitrogen_redox-ammonia_oxidation", "sum": 4}, {"reaction": "nitrogen_redox-comammox", "sum": 1}, {"reaction": "nitrogen_redox-assimilatory_nitrate_reduction", "sum": 374}, {"reaction": "chemotaxis-chemotaxis", "sum": 5766}, {"reaction": "flagella_assembly-flagella_assembly", "sum": 3846}, {"reaction": "sulfur_redox-dissimilatory_sulfate_reduction", "sum": 0}, {"reaction": "sulfur_redox-assimilatory_sulfate_reduction", "sum": 4305}, {"reaction": "sulfur_redox-dissimilatory_sulfur_oxidation", "sum": 0}, {"reaction": "carbon_redox-assimilatory_methanotrophy", "sum": 0}, {"reaction": "carbon_redox-dissimilatory_methanotrophy", "sum": 3}, {"reaction": "xylose_degradation-isomerase_pathway", "sum": 4084}, {"reaction": "xylose_degradation-oxidoreductase_pathway", "sum": 0}, {"reaction": "xylose_degradation-xylonate_hydratase_pathway", "sum": 0}, {"reaction": "xylose_degradation-weimburg_dahms", "sum": 0}, {"reaction": "acetogenesis-all_acetogenesis", "sum": 6908}, {"reaction": "ethanol_fermentation-all_ethanol_fermentation", "sum": 1713}, {"reaction": "lactate_fermentation-all_lactate_fermentation", "sum": 6071}, {"reaction": "propionate_fermentation-succinate_pathway", "sum": 631}, {"reaction": "propionate_fermentation-acrylate_pathway", "sum": 114}, {"reaction": "butanoate_fermentation-succinate_pathway", "sum": 0}, {"reaction": "butanoate_fermentation-acetyl_coa_pathway", "sum": 847}, {"reaction": "galactose_degradation-all_galactose_degradation", "sum": 6189}, {"reaction": "sucrose_degradation-all_sucrose_degradation", "sum": 6548}, {"reaction": "mannose_degradation-all_mannose_degradation", "sum": 1069}, {"reaction": "fucose_degradation-all_fucose_degradation", "sum": 26}, {"reaction": "galacturonic_acid_degradation-all_galacturonic_acid_degradation", "sum": 1710}, {"reaction": "hydrogenotrophic_methanogenesis-all_hydrogenotrophic_methanogenesis", "sum": 274}, {"reaction": "acetoclastic_methanogenesis-all_acetoclastic_methanogenesis", "sum": 196}, {"reaction": "methylotrophic_methanogenesis-methanol_methanogenesis", "sum": 222}, {"reaction": "methylotrophic_methanogenesis-methylamine_methanogenesis", "sum": 194}, {"reaction": "methylotrophic_methanogenesis-dimethylamine_methanogenesis", "sum": 194}, {"reaction": "methylotrophic_methanogenesis-trimethylamine_methanogenesis", "sum": 194}, {"reaction": "methylotrophic_methanogenesis-methanethiol_methanogenesis", "sum": 194}, {"reaction": "Calvin_Benson-all_Calvin_Benson", "sum": 1720}, {"reaction": "rTCA-all_rTCA", "sum": 0}, {"reaction": "Wood_Ljungdahl-all_Wood_Ljungdahl", "sum": 108}, {"reaction": "Fuchs_Holo-all_Fuchs_Holo", "sum": 0}, {"reaction": "HPHB_DCHB-DCHB", "sum": 25}, {"reaction": "HPHB_DCHB-HPHB", "sum": 0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
