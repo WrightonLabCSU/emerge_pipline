@@ -1,0 +1,14 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.*
+  - snakemake
+  - altair
+  - click
+  - graphviz
+  - python-graphviz
+  - networkx
+  - numpy
+  - pandas
+  - pytest

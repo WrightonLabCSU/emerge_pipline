@@ -6,7 +6,7 @@ from datetime import datetime, date
 import pandas as pd
 import numpy as np
 
-DATE = str(date.today().strftime('%d%m%y'))
+DATE = "032822"# str(date.today().strftime('%d%m%y'))
 
 import re
 

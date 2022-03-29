@@ -1,8 +1,8 @@
 annotations:
   # - ./resources/test_data/min_annotations_20100900_E1D_12.tsv
   # - ./resources/test_data/min_annotations_3300023248_8.tsv
-  - /home/projects-wrighton/EMERGE/EMERGE_MAGs_v1/Emerge_MAGs_v1/gene_db/Cronin_DRAMv1_annotations.txt
-  - /home/projects-wrighton/EMERGE/EMERGE_MAGs_v1/Emerge_MAGs_v1/gene_db/JGI_DRAMv1_annotations.txt
-  - /home/projects-wrighton/EMERGE/EMERGE_MAGs_v1/Emerge_MAGs_v1/gene_db/SIP_DRAMv1_annotations.txt
-  - /home/projects-wrighton/EMERGE/EMERGE_MAGs_v1/Emerge_MAGs_v1/gene_db/Woodcroft_DRAMv1_annotations.txt
+  - <path>/Cronin_DRAMv1_annotations.txt
+  - <path>/JGI_DRAMv1_annotations.txt
+  - <path>/SIP_DRAMv1_annotations.txt
+  - <path>/Woodcroft_DRAMv1_annotations.txt
 dram_to_use: '1_2' # pick 1.2=1_2 or 1.3=1_3 depending on the dram you used
