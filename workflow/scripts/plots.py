@@ -2,7 +2,8 @@ import altair as alt
 import pandas as pd
 
 
-product_refied = pd.read_csv('results/EMERGE_032822_product_refined.tsv', sep='\t', index_col=0).T
+product_refied = pd.read_csv('results/EMERGE_032822_product_refined.tsv', 
+                             sep='\t', index_col=0).T
 product_refied.shape
 product_refied_sum = pd.DataFrame(product_refied.apply(sum, axis=1), columns=['sum']).reset_index()
 product_refied_sum.rename(columns={"index":"reaction"}, inplace=True)

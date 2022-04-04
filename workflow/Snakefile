@@ -9,6 +9,7 @@ import numpy as np
 DATE = "032822"# str(date.today().strftime('%d%m%y'))
 
 import re
+from glob import glob
 
 rule all:
     input:
@@ -116,7 +117,7 @@ rule dram_emerge_distill:
 
 rule combine_annotations:
     input:
-        config['annotations']
+        [i for j in config['annotations'] for i in glob(j)]
     output:
         "results/all_annotations.tsv"
     run:

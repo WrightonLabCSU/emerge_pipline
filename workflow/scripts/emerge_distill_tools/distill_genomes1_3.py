@@ -555,7 +555,7 @@ def distill_genomes(input_file:str, trna_path:str=None, rrna_path:str=None,
     print('%s: Retrieved database locations and descriptions' % (str(datetime.now() - start_time)))
 
     # make output folder
-    mkdir(output_dir)
+    #mkdir(output_dir)
 
     # make genome stats
     genome_stats = make_genome_stats(annotations, rrna_frame, trna_frame, groupby_column=groupby_column)
