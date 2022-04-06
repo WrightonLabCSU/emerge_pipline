@@ -10,9 +10,9 @@ nitrogen_redox	10+11+13	comammox	amoA+nxrA	K10944+K00370
 nitrogen_redox	16+17	assimilatory_nitrate_reduction			
 chemotaxis	1+2+3+4+5	chemotaxis	cheY	K03413	
 flagella_assembly	1+2+3+4+5+6+7+8+9	flagella_assembly	flgE+motA	K02390+K02556	
-sulfur_redox	1+2+3+4+5+13,1+2+3+4+5+14	dissimilatory_sulfate_reduction	dsrA+dsrC	K11180+K23077	
+sulfur_redox	1+2+3,1+2+3+4+5	dissimilatory_sulfate_reduction	dsrA+dsrC	K11180+K23077	
 sulfur_redox	1+6+7+8	assimilatory_sulfate_reduction			
-sulfur_redox	1+2+9+10+11,1+2+9+10+12,1+2+9+10+13,1+2+9+10+14	dissimilatory_sulfur_oxidation	soxB	K17224	
+sulfur_redox	9,10,11,12,13,14	dissimilatory_sulfur_oxidation	soxB	K17224	
 urea_degradation	1	all_urea_degradation			Next steps: custom hmms or by text string
 carbon_redox	3+4+5	assimilatory_methanotrophy			for missing KOs - can also pull by organism string or blast before sending
 carbon_redox	3+4+6+7	dissimilatory_methanotrophy	pmoA	K10944	
