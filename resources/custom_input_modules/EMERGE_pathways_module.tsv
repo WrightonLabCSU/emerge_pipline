@@ -202,3 +202,10 @@ EMERGE199	4-hydroxybutanoyl-CoA->crotonyl-CoA -19	HPHB_DCHB	K14534
 EMERGE200	crotonyl-CoA->3-hydroxybutanoyl-CoA -20	HPHB_DCHB	K01825,K01782,K01715,K01692,K17865
 EMERGE201	3-hydroxybutanoyl-CoA->acetoacetyl-CoA -21	HPHB_DCHB	K07516,K00022,K00074,K00023
 EMERGE202	acetoacetyl-CoA->acetyl-CoA -22	HPHB_DCHB	K00626
+EMERGE203	PEP -> pyruvate-PO3 -2	phosphorous_redox	K01841,K23999
+EMERGE204	pyruvate-PO3 -> acetaldehyde-PO3 -3	phosphorous_redox	K09459
+EMERGE205	phosphite -> phosphate -5	phosphorous_redox	K18916
+EMERGE206	methyl-phosphonate -> phosphate -6	phosphorous_redox	(K06166+K06165+K06164+K06162+K05780+K06163+K05781),(K23996+K05915)
+EMERGE207	pyruvate-phosphonate -> phosphate -7	phosphorous_redox	K19669
+EMERGE208	acetate-phosphonate -> phosphate -8	phosphorous_redox	K19670
+EMERGE209	acetaldehyde-phosphonate -> phosphate -9	phosphorous_redox	K05306

@@ -16,6 +16,9 @@ sulfur_redox	9,10,11,12,13,14	dissimilatory_sulfur_oxidation
 urea_degradation	1	all_urea_degradation			Next steps: custom hmms or by text string
 carbon_redox	3+4+5	assimilatory_methanotrophy	fae,fae-hps	K10713,K13812	for missing KOs - can also pull by organism string or blast before sending
 carbon_redox	3+4+6+7	dissimilatory_methanotrophy			
+phosphorous_redox	5	phosphite_oxidation			
+phosphorous_redox	6,7,8,9	assimilatory_phosphonate_oxidation			
+phosphorous_redox	2+3	anabolic_phosphate_reduction			
 xylose_degradation	1+2	isomerase_pathway			
 xylose_degradation	2+3+4	oxidoreductase_pathway			
 xylose_degradation	7+8	xylonate_hydratase_pathway			
