@@ -55,6 +55,9 @@ K00245	EMERGE	HPHB_DCHB_6	EMERGE	Emerge	fumarate->succinate	False
 K00246	EMERGE	HPHB_DCHB_6	EMERGE	Emerge	fumarate->succinate	False
 K00247	EMERGE	HPHB_DCHB_6	EMERGE	Emerge	fumarate->succinate	False
 K00248	EMERGE	propionate_fermentation_13	EMERGE	Emerge	acryloyl-CoA->propionyl-CoA	False
+K00281	EMERGE	reductive_glycine_4	EMERGE	Emerge	5,10_methylene_H4F+ammonium+carbon-dioxide->glycine	False
+K00282	EMERGE	reductive_glycine_4	EMERGE	Emerge	5,10_methylene_H4F+ammonium+carbon-dioxide->glycine	False
+K00283	EMERGE	reductive_glycine_4	EMERGE	Emerge	5,10_methylene_H4F+ammonium+carbon-dioxide->glycine	False
 K00297	EMERGE	Wood_Ljungdahl_9	EMERGE	Emerge	5,10_methylene_H4F->5_methyl_H4F	False
 K00319	EMERGE	Wood_Ljungdahl_8	EMERGE	Emerge	5,10_methenyl_H4MPT->5,10_methylene_H4MPT	False
 K00320	EMERGE	Wood_Ljungdahl_10	EMERGE	Emerge	5,10_methylene_H4MPT->5_methyl_H4MPT	False
@@ -70,6 +73,7 @@ K00372	EMERGE	nitrogen_redox_16	EMERGE	Emerge	nitrate->nitrite	False
 K00376	EMERGE	nitrogen_redox_6	EMERGE	Emerge	nitrous oxide->dinitrogen	False
 K00380	EMERGE	sulfur_redox_8	EMERGE	Emerge	sulfite->sulfide	False
 K00381	EMERGE	sulfur_redox_8	EMERGE	Emerge	sulfite->sulfide	False
+K00382	EMERGE	reductive_glycine_4	EMERGE	Emerge	5,10_methylene_H4F+ammonium+carbon-dioxide->glycine	False
 K00390	EMERGE	sulfur_redox_7	EMERGE	Emerge	PAPS->sulfite	False
 K00392	EMERGE	sulfur_redox_8	EMERGE	Emerge	sulfite->sulfide	False
 K00394	EMERGE	sulfur_redox_2	EMERGE	Emerge	APS->sulfite	False
@@ -87,6 +91,8 @@ K00581	EMERGE	methylotrophic_methanogenesis_6	EMERGE	Emerge	5-methyl-H4MPT+CoM->
 K00582	EMERGE	methylotrophic_methanogenesis_6	EMERGE	Emerge	5-methyl-H4MPT+CoM->methyl-CoM	False
 K00583	EMERGE	methylotrophic_methanogenesis_6	EMERGE	Emerge	5-methyl-H4MPT+CoM->methyl-CoM	False
 K00584	EMERGE	methylotrophic_methanogenesis_6	EMERGE	Emerge	5-methyl-H4MPT+CoM->methyl-CoM	False
+K00600	EMERGE	reductive_glycine_5	EMERGE	Emerge	5,10_methylene_H4F+glycine->serine	False
+K00605	EMERGE	reductive_glycine_4	EMERGE	Emerge	5,10_methylene_H4F+ammonium+carbon-dioxide->glycine	False
 K00615	EMERGE	Calvin_Benson_7	EMERGE	Emerge	fructose-6-P+glyceraldehyde-3-P+sedoheptulose-7-P->erythrose-4-P+ribose-5-P+xylulose-5-P	False
 K00625	EMERGE	acetoclastic_methanogenesis_3	EMERGE	Emerge	acetyl-P->acetyl-CoA	False
 K00626	EMERGE	HPHB_DCHB_22	EMERGE	Emerge	acetoacetyl-CoA->acetyl-CoA	False
@@ -141,6 +147,8 @@ K01648	EMERGE	rTCA_1	EMERGE	Emerge	citrate->acetyl-CoA+oxaloacetate	False
 K01685	EMERGE	galacturonic_acid_degradation_3	EMERGE	Emerge	D-altronate->2-dehydro-3-deoxy-D-gluconate	False
 K01692	EMERGE	HPHB_DCHB_20	EMERGE	Emerge	crotonyl-CoA->3-hydroxybutanoyl-CoA	False
 K01715	EMERGE	HPHB_DCHB_20	EMERGE	Emerge	crotonyl-CoA->3-hydroxybutanoyl-CoA	False
+K01752	EMERGE	reductive_glycine_6	EMERGE	Emerge	serine->pyruvate+ammonium	False
+K01754	EMERGE	reductive_glycine_6	EMERGE	Emerge	serine->pyruvate+ammonium	False
 K01782	EMERGE	HPHB_DCHB_20	EMERGE	Emerge	crotonyl-CoA->3-hydroxybutanoyl-CoA	False
 K01783	EMERGE	Calvin_Benson_11	EMERGE	Emerge	xylulose-5-P->ribulose-5-P	False
 K01784	EMERGE	galactose_degradation_4	EMERGE	Emerge	UPD-a-galactose->UPD-glucose	False
@@ -186,6 +194,7 @@ K02417	EMERGE	flagella_assembly_2	EMERGE	Emerge	C-ring->None	False
 K02419	EMERGE	flagella_assembly_3	EMERGE	Emerge	type-III secretion->None	False
 K02420	EMERGE	flagella_assembly_3	EMERGE	Emerge	type-III secretion->None	False
 K02421	EMERGE	flagella_assembly_3	EMERGE	Emerge	type-III secretion->None	False
+K02437	EMERGE	reductive_glycine_4	EMERGE	Emerge	5,10_methylene_H4F+ammonium+carbon-dioxide->glycine	False
 K02446	EMERGE	Calvin_Benson_6	EMERGE	Emerge	fructose-1,6-bis-P->fructose-6-P	False
 K02556	EMERGE	flagella_assembly_1	EMERGE	Emerge	stator->None	False
 K02557	EMERGE	flagella_assembly_1	EMERGE	Emerge	stator->None	False
@@ -263,6 +272,9 @@ K08691	EMERGE	Fuchs_Holo_10	EMERGE	Emerge	S-malyl-CoA+propionyl-CoA+S-citramalyl
 K09709	EMERGE	Fuchs_Holo_13	EMERGE	Emerge	mesaconyl-C4-CoA->S-citramalyl-CoA	False
 K09459	EMERGE	phosphorous_redox	EMERGE	Emerge	pyruvate-phosphonate->acetaldehyde-phosphonate	False
 K10535	EMERGE	nitrogen_redox_11	EMERGE	Emerge	hydroxylamine->nitric oxide	False
+K10670	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
+K10671	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
+K10672	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
 K10713	EMERGE	carbon_redox_5	EMERGE	Emerge	formaldehyde->5,10-methylene-THMPT	False
 K10944	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
 K10945	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
@@ -378,6 +390,8 @@ K20932	EMERGE	nitrogen_redox_8	EMERGE	Emerge	ammonium/nitric oxide->hydrazine	Fa
 K20933	EMERGE	nitrogen_redox_8	EMERGE	Emerge	ammonium/nitric oxide->hydrazine	False
 K20934	EMERGE	nitrogen_redox_8	EMERGE	Emerge	ammonium/nitric oxide->hydrazine	False
 K20935	EMERGE	nitrogen_redox_9	EMERGE	Emerge	hydrazine->dinitrogen	False
+K21576	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
+K21577	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
 K21836	EMERGE	propionate_fermentation_10	EMERGE	Emerge	pyruvate->lactate	False
 K22015	EMERGE	Wood_Ljungdahl_1	EMERGE	Emerge	carbon dioxide->formate	False
 K22186	EMERGE	xylose_degradation_7	EMERGE	Emerge	D-xylonate->2-dehydro-3-deoxy-D-xylonate	False

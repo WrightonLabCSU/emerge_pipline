@@ -209,3 +209,14 @@ EMERGE206	methyl-phosphonate -> phosphate -6	phosphorous_redox	(K06166+K06165+K0
 EMERGE207	pyruvate-phosphonate -> phosphate -7	phosphorous_redox	K19669
 EMERGE208	acetate-phosphonate -> phosphate -8	phosphorous_redox	K19670
 EMERGE209	acetaldehyde-phosphonate -> phosphate -9	phosphorous_redox	K05306
+EMERGE210	carbon dioxide->formate -1	reductive_glycine	K05299+K15022,K22015+K25123+K25124
+EMERGE211	formate+THF->formyl-H4MPT -2	reductive_glycine	K01938
+EMERGE212	5,10_methenyl_H4F->5,10_methylene_H4F -3	reductive_glycine	K01491
+EMERGE213	5,10_methylene_H4F+ammonium+carbon-dioxide->glycine -4	reductive_glycine	K02437+(K00282+K00283,K00281)+K00605+K00382
+EMERGE214	5,10_methylene_H4F+glycine->serine -5	reductive_glycine	K00600
+EMERGE215	serine->pyruvate+ammonium -6	reductive_glycine	K01752,K01754
+EMERGE216	glycine->acetyl-P+ammonium -7	reductive_glycine	K10670+K10671+K10672+K21576+K21577
+EMERGE217	acetyl-CoA->acetyl-P -8	reductive_glycine	K00625,K13788,K04020
+EMERGE218	acetyl-P->acetate -9	reductive_glycine	K01512,K00925
+EMERGE219	acetate->acetyl-CoA -10	reductive_glycine	K01895
+EMERGE220	acetyl-CoA+carbon-dioxide->pyruvate -11	reductive_glycine	(K00169+K00170+K00171+K00172),(K00169+K00170+K00171+K00189),(K03737)
