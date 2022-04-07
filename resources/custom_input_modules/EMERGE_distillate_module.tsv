@@ -235,26 +235,26 @@ K04480	EMERGE	methylotrophic_methanogenesis_1	EMERGE	Emerge	methanol->methyl-CoM
 K04488	EMERGE	nitrogen_redox_7	EMERGE	Emerge	dinitrogen->ammonium	False
 K04561	EMERGE	nitrogen_redox_5	EMERGE	Emerge	nitric oxide->nitrous oxide	False
 K05299	EMERGE	Wood_Ljungdahl_1	EMERGE	Emerge	carbon dioxide->formate	False
-K05306	EMERGE	phosphorous_redox	EMERGE	Emerge	acetaldehyde-phosphonate->phosphate	False
+K05306	EMERGE	phosphorous_redox_9	EMERGE	Emerge	acetaldehyde-phosphonate->phosphate	False
 K05349	EMERGE	cellulose_degradation_3	EMERGE	Emerge	cellobiose->D-glucose	False
 K05350	EMERGE	cellulose_degradation_3	EMERGE	Emerge	cellobiose->D-glucose	False
 K05351	EMERGE	xylose_degradation_4	EMERGE	Emerge	xylitol->D-xylulose	False
 K05601	EMERGE	nitrogen_redox_5	EMERGE	Emerge	nitric oxide->nitrous oxide	False
 K05606	EMERGE	HPHB_DCHB_14	EMERGE	Emerge	S-methylmalonyl-CoA->R-methylmalonyl-CoA	False
-K05780	EMERGE	phosphorous_redox	EMERGE	Emerge	methyl-phosphonate->phosphate	False
-K05781	EMERGE	phosphorous_redox	EMERGE	Emerge	methyl-phosphonate->phosphate	False
+K05780	EMERGE	phosphorous_redox_6	EMERGE	Emerge	methyl-phosphonate->phosphate	False
+K05781	EMERGE	phosphorous_redox_6	EMERGE	Emerge	methyl-phosphonate->phosphate	False
 K05874	EMERGE	chemotaxis_1	EMERGE	Emerge	mcp->None	False
 K05875	EMERGE	chemotaxis_1	EMERGE	Emerge	mcp->None	False
 K05876	EMERGE	chemotaxis_1	EMERGE	Emerge	mcp->None	False
 K05877	EMERGE	chemotaxis_1	EMERGE	Emerge	mcp->None	False
-K05915	EMERGE	phosphorous_redox	EMERGE	Emerge	methyl-phosphonate->phosphate	False
+K05915	EMERGE	phosphorous_redox_6	EMERGE	Emerge	methyl-phosphonate->phosphate	False
 K05916	EMERGE	nitrogen_redox_14	EMERGE	Emerge	nitric oxide->nitrate	False
 K06595	EMERGE	chemotaxis_1	EMERGE	Emerge	mcp->None	False
-K06162	EMERGE	phosphorous_redox	EMERGE	Emerge	methyl-phosphonate->phosphate	False
-K06163	EMERGE	phosphorous_redox	EMERGE	Emerge	methyl-phosphonate->phosphate	False
-K06164	EMERGE	phosphorous_redox	EMERGE	Emerge	methyl-phosphonate->phosphate	False
-K06165	EMERGE	phosphorous_redox	EMERGE	Emerge	methyl-phosphonate->phosphate	False
-K06166	EMERGE	phosphorous_redox	EMERGE	Emerge	methyl-phosphonate->phosphate	False
+K06162	EMERGE	phosphorous_redox_6	EMERGE	Emerge	methyl-phosphonate->phosphate	False
+K06163	EMERGE	phosphorous_redox_6	EMERGE	Emerge	methyl-phosphonate->phosphate	False
+K06164	EMERGE	phosphorous_redox_6	EMERGE	Emerge	methyl-phosphonate->phosphate	False
+K06165	EMERGE	phosphorous_redox_6	EMERGE	Emerge	methyl-phosphonate->phosphate	False
+K06166	EMERGE	phosphorous_redox_6	EMERGE	Emerge	methyl-phosphonate->phosphate	False
 K07516	EMERGE	HPHB_DCHB_21	EMERGE	Emerge	3-hydroxybutanoyl-CoA->acetoacetyl-CoA	False
 K08264	EMERGE	methylotrophic_methanogenesis_8	EMERGE	Emerge	CoM-S-S-CoB->CoM+CoB	False
 K08265	EMERGE	methylotrophic_methanogenesis_8	EMERGE	Emerge	CoM-S-S-CoB->CoM+CoB	False
@@ -270,7 +270,7 @@ K08358	EMERGE	sulfur_redox_4	EMERGE	Emerge	tetrathionate->thiosulfate	False
 K08359	EMERGE	sulfur_redox_4	EMERGE	Emerge	tetrathionate->thiosulfate	False
 K08691	EMERGE	Fuchs_Holo_10	EMERGE	Emerge	S-malyl-CoA+propionyl-CoA+S-citramalyl-CoA->glyoxylate+acetyl-CoA+2R,3S-B-methylmalyl-CoA+pyruvate	False
 K09709	EMERGE	Fuchs_Holo_13	EMERGE	Emerge	mesaconyl-C4-CoA->S-citramalyl-CoA	False
-K09459	EMERGE	phosphorous_redox	EMERGE	Emerge	pyruvate-phosphonate->acetaldehyde-phosphonate	False
+K09459	EMERGE	phosphorous_redox_3	EMERGE	Emerge	pyruvate-phosphonate->acetaldehyde-phosphonate	False
 K10535	EMERGE	nitrogen_redox_11	EMERGE	Emerge	hydroxylamine->nitric oxide	False
 K10670	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
 K10671	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
@@ -376,10 +376,10 @@ K18558	EMERGE	HPHB_DCHB_6	EMERGE	Emerge	fumarate->succinate	False
 K18559	EMERGE	HPHB_DCHB_6	EMERGE	Emerge	fumarate->succinate	False
 K18560	EMERGE	HPHB_DCHB_6	EMERGE	Emerge	fumarate->succinate	False
 K18930	EMERGE	propionate_fermentation_10	EMERGE	Emerge	pyruvate->lactate	False
-K18916	EMERGE	phosphorous_redox	EMERGE	Emerge	phosphite->phosphate	False
+K18916	EMERGE	phosphorous_redox_5	EMERGE	Emerge	phosphite->phosphate	False
 K19668	EMERGE	cellulose_degradation_2	EMERGE	Emerge	1,4-B-D-cellulose->cellobiose	False
-K19669	EMERGE	phosphorous_redox	EMERGE	Emerge	pyruvate-phosphonate->phosphate	False
-K19670	EMERGE	phosphorous_redox	EMERGE	Emerge	acetate-phosphonate->phosphate	False
+K19669	EMERGE	phosphorous_redox_7	EMERGE	Emerge	pyruvate-phosphonate->phosphate	False
+K19670	EMERGE	phosphorous_redox_8	EMERGE	Emerge	acetate-phosphonate->phosphate	False
 K19709	EMERGE	butanoate_fermentation_11	EMERGE	Emerge	butanoyl-CoA->butanoate	False
 K19745	EMERGE	propionate_fermentation_13	EMERGE	Emerge	acryloyl-CoA->propionyl-CoA	False
 K20143	EMERGE	propionate_fermentation_13	EMERGE	Emerge	acryloyl-CoA->propionyl-CoA	False
@@ -413,8 +413,8 @@ K22899	EMERGE	nitrogen_redox_7	EMERGE	Emerge	dinitrogen->ammonium	False
 K22903	EMERGE	nitrogen_redox_7	EMERGE	Emerge	dinitrogen->ammonium	False
 K23077	EMERGE	sulfur_redox_9	EMERGE	Emerge	sulfur->sulfite	False
 K23995	EMERGE	carbon_redox_4	EMERGE	Emerge	methanol->formaldehyde	False
-K23996	EMERGE	phosphorous_redox	EMERGE	Emerge	methyl-phosphonate->phosphate	False
-K23999	EMERGE	phosphorous_redox	EMERGE	Emerge	PEP->pyruvate-phosphonate	False
+K23996	EMERGE	phosphorous_redox_6	EMERGE	Emerge	methyl-phosphonate->phosphate	False
+K23999	EMERGE	phosphorous_redox_2	EMERGE	Emerge	PEP->pyruvate-phosphonate	False
 K24012	EMERGE	propionate_fermentation_9	EMERGE	Emerge	propionyl-CoA->propionate	False
 K24442	EMERGE	xylose_degradation_5	EMERGE	Emerge	D-xylose->D-xylonolactone	False
 K24443	EMERGE	xylose_degradation_6	EMERGE	Emerge	D-xylonolactone->D-xylonate	False
