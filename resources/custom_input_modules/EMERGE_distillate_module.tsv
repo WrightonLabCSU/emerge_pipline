@@ -7,10 +7,14 @@ K00022	EMERGE	HPHB_DCHB_21	EMERGE	Emerge	3-hydroxybutanoyl-CoA->acetoacetyl-CoA	
 K00023	EMERGE	HPHB_DCHB_21	EMERGE	Emerge	3-hydroxybutanoyl-CoA->acetoacetyl-CoA	False
 K00041	EMERGE	galacturonic_acid_degradation_2	EMERGE	Emerge	D-tagaturonate->D-altronate	False
 K00043	EMERGE	HPHB_DCHB_17	EMERGE	Emerge	succinate semialdehyde->4-hydroxybutanoate	False
+K00057	EMERGE	glycerol_degradation_2	EMERGE	Emerge	glycerol-3-P->glycerone-P	False
 K00074	EMERGE	HPHB_DCHB_21	EMERGE	Emerge	3-hydroxybutanoyl-CoA->acetoacetyl-CoA	False
 K00078	EMERGE	xylose_degradation_5	EMERGE	Emerge	D-xylose->D-xylonolactone	False
 K00101	EMERGE	propionate_fermentation_10	EMERGE	Emerge	pyruvate->lactate	False
 K00102	EMERGE	propionate_fermentation_10	EMERGE	Emerge	pyruvate->lactate	False
+K00111	EMERGE	glycerol_degradation_2	EMERGE	Emerge	glycerol-3-P->glycerone-P	False
+K00112	EMERGE	glycerol_degradation_2	EMERGE	Emerge	glycerol-3-P->glycerone-P	False
+K00113	EMERGE	glycerol_degradation_2	EMERGE	Emerge	glycerol-3-P->glycerone-P	False
 K00114	EMERGE	ethanol_fermentation_3	EMERGE	Emerge	acetaldehyde->ethanol	False
 K00117	EMERGE	xylose_degradation_8	EMERGE	Emerge	D-xylose->D-xylonate	False
 K00121	EMERGE	ethanol_fermentation_3	EMERGE	Emerge	acetaldehyde->ethanol	False
@@ -108,6 +112,8 @@ K00849	EMERGE	galactose_degradation_2	EMERGE	Emerge	a-D-galactose->a-D-galactose
 K00854	EMERGE	xylose_degradation_2	EMERGE	Emerge	D-xylulose->D-xylulose-5-phosphate	False
 K00855	EMERGE	Calvin_Benson_12	EMERGE	Emerge	ribulose-5-P->ribulose-1,5-bis-P	False
 K00860	EMERGE	sulfur_redox_6	EMERGE	Emerge	APS->PAPS	False
+K00863	EMERGE	glycerol_degradation_3	EMERGE	Emerge	glycerone->glycerone-P	False
+K00864	EMERGE	glycerol_degradation_1	EMERGE	Emerge	glycerol->glycerol-3-P	False
 K00874	EMERGE	galacturonic_acid_degradation_4	EMERGE	Emerge	2-dehydro-3-deoxy-D-gluconate->2-dehydro-3-deoxy-6-phospho-D-gluconate	False
 K00879	EMERGE	fucose_degradation_2	EMERGE	Emerge	L-fuculose->L-fuculose-1P	False
 K00925	EMERGE	acetoclastic_methanogenesis_2	EMERGE	Emerge	acetate->acetyl-P	False
@@ -247,6 +253,9 @@ K05874	EMERGE	chemotaxis_1	EMERGE	Emerge	mcp->None	False
 K05875	EMERGE	chemotaxis_1	EMERGE	Emerge	mcp->None	False
 K05876	EMERGE	chemotaxis_1	EMERGE	Emerge	mcp->None	False
 K05877	EMERGE	chemotaxis_1	EMERGE	Emerge	mcp->None	False
+K05878	EMERGE	glycerol_degradation_3	EMERGE	Emerge	glycerone->glycerone-P	False
+K05879	EMERGE	glycerol_degradation_3	EMERGE	Emerge	glycerone->glycerone-P	False
+K05881	EMERGE	glycerol_degradation_3	EMERGE	Emerge	glycerone->glycerone-P	False
 K05915	EMERGE	phosphorous_redox_6	EMERGE	Emerge	methyl-phosphonate->phosphate	False
 K05916	EMERGE	nitrogen_redox_14	EMERGE	Emerge	nitric oxide->nitrate	False
 K06595	EMERGE	chemotaxis_1	EMERGE	Emerge	mcp->None	False

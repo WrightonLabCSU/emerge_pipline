@@ -37,6 +37,8 @@ fructose_degradation	1	all_fructose_degradation
 mannose_degradation	1+3,2+3	all_mannose_degradation			
 fucose_degradation	1+2+3	all_fucose_degradation			
 galacturonic_acid_degradation	1+2+3+4+5	all_galacturonic_acid_degradation			
+glycerol_degradation	1+2+4	glycerol_degradation			
+glycerol_degradation	3+4	glycerone_degradation			
 hydrogenotrophic_methanogenesis	1+2+3+4+5+6+7+8,1+2+3+4+5+6+7+9	all_hydrogenotrophic_methanogenesis			
 acetoclastic_methanogenesis	1+4+5+6+7,2+3+4+5+6+7,1+4+5+6+8,2+3+4+5+6+8	all_acetoclastic_methanogenesis			
 methylotrophic_methanogenesis	1+6+7+8,1+6+7+9	methanol_methanogenesis	mtaA,mtaB,mtaC	K14080,K04480,K14081	

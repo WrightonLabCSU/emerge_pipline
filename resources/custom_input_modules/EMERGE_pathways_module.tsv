@@ -220,3 +220,7 @@ EMERGE217	acetyl-CoA->acetyl-P -8	reductive_glycine	K00625,K13788,K04020
 EMERGE218	acetyl-P->acetate -9	reductive_glycine	K01512,K00925
 EMERGE219	acetate->acetyl-CoA -10	reductive_glycine	K01895
 EMERGE220	acetyl-CoA+carbon-dioxide->pyruvate -11	reductive_glycine	(K00169+K00170+K00171+K00172),(K00169+K00170+K00171+K00189),(K03737)
+EMERGE221	glycerol->glycerol-3-P -1	glycerol_degradation	K00864
+EMERGE222	glycerol-3-P->glycerone-P -2	glycerol_degradation	(K00111+K00112+K00113),(K00057)
+EMERGE223	glycerone->glycerone-P -3	glycerol_degradation	(K05878+K05879+K05881),(K00863)
+EMERGE224	glycerone-P->glyceraldehyde-3-P -4	glycerol_degradation	K01803
