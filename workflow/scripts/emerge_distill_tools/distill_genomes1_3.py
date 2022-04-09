@@ -2,6 +2,7 @@
 from os import path, mkdir
 from itertools import tee
 import re
+import warnings
 import pandas as pd
 from collections import Counter, defaultdict
 import networkx as nx
@@ -39,7 +40,9 @@ def fill_genome_summary_frame(annotations, genome_summary_frame, groupby_column)
                 if j in id_dict:
                     identifier_count += id_dict[j]
             counts.append(identifier_count)
-        genome_summary_frame[genome] = counts
+        with warnings.catch_warnings():
+            warnings.filterwarnings("ignore", category=pd.errors.PerformanceWarning)
+            genome_summary_frame[genome] = counts
     return genome_summary_frame
 
 

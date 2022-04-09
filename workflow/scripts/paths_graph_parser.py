@@ -166,7 +166,8 @@ class RuleParser():
     def make_path_graph(self, pathway_definition:str, reactn:pd.DataFrame):
         self.reactn = reactn
         if not reactn.index.is_unique:
-            raise ValueError("Index is not unique, make it so!")
+            raise ValueError("Index is not unique, make it so!"
+                             f"Duplicats are: {reactn.index[reactn.index.duplicated()]}")
         self.pG = nx.DiGraph()
         self.pG.add_node(self.genome, display=self.genome, type='root', present=None)
         self.parse_paths(pathway_definition, 0, parent=self.genome)
@@ -382,7 +383,7 @@ def met_paths(ctx, pathways_file:str, reaction_file:str, distillate_file:str):
         .assign(module_num=(
             lambda x: x['module_name']
             .str
-            .split(' -', expand=True)[1]))
+            .split('number:', expand=True)[1]))
         .drop(['module_id', 'module_name'], axis=1)
         .set_index(['complex', 'module_num'])
     )
@@ -488,22 +489,22 @@ def test_pathways():
        ).T
     reactions = (pd.DataFrame(
         [
-            ["EMERGE0", "nitrate->nitrite -1", "nitrogen_redox",
+            ["EMERGE0", "nitrate->nitrite number:1", "nitrogen_redox",
             "(K00001+K00003),(K00005+K00005)"],
-           ["EMERGE1", "nitrite->ammonium -2", "nitrogen_redox",
+           ["EMERGE1", "nitrite->ammonium number:2", "nitrogen_redox",
             "(K00005+K00005),(K00005+K00005)"],
-           ["EMERGE6", "dinitrogen->ammonium -3", "nitrogen_redox",
+           ["EMERGE6", "dinitrogen->ammonium number:3", "nitrogen_redox",
             "(K00005+K00005+K00005+K00005+K00005+K00005+K00005+K00005),"
             "(K00001+K00003+K00004+K00001+K00002+K00005+K00005),"
             "(K00002+K00001+K00003+K00005+K00005+K00005)"],
-            ["EMERGE0", "nitrate->nitrite -4", "nitrogen_redox",
+            ["EMERGE0", "nitrate->nitrite number:4", "nitrogen_redox",
             "(K00005+K00005),(K00005+K00005)"],
-           ["EMERGE1", "nitrite->ammonium -5", "nitrogen_redox",
+           ["EMERGE1", "nitrite->ammonium number:5", "nitrogen_redox",
             "(K00004),(K00003)"],
         ],
         columns=["module_id", "module_name", "complex", "definition"]
         ).assign(
-            module_num=(lambda x: x['module_name'].str.split(' -', expand=True)[1])
+            module_num=(lambda x: x['module_name'].str.split('number:', expand=True)[1])
         )
         .drop(['module_id', 'module_name'], axis=1)
         .set_index(['complex', 'module_num'])
