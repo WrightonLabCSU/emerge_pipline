@@ -47,7 +47,7 @@ EMERGE44	urea->carbon dioxide number:1	urea_degradation	K01427,(K01428+K01429+K0
 EMERGE45	methane->methanol number:3	carbon_redox	(K10946+K10944+K10945),(K16157+K16158+K16159+K16160+K16161)
 EMERGE46	methanol->formaldehyde number:4	carbon_redox	(K14028+K14029),K23995
 EMERGE47	formaldehyde->5,10-methylene-THMPT number:5	carbon_redox	K10713,K13812
-EMERGE48	formaldehyde->formate number:6	carbon_redox	K00148,(K03396+K00121+K01070)
+EMERGE48	formaldehyde->formate number:6	carbon_redox	K00148,(K03396+K00121+K01070),(K10713+K10714+K01499+K00672)
 EMERGE49	formate->carbon dioxide number:7	carbon_redox	K00122,(K05299+K15022),(K00123+K22515),(K08348+K08349+K08350),(K00123+K00124+K00127)
 EMERGE50	1,4-B-D-cellulose->cellobiose number:1	cellulose_degradation	K20829
 EMERGE51	1,4-B-D-cellulose->cellobiose number:2	cellulose_degradation	K19668

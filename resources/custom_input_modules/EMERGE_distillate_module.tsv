@@ -429,3 +429,4 @@ K24442	EMERGE	xylose_degradation_5	EMERGE	Emerge	D-xylose->D-xylonolactone	False
 K24443	EMERGE	xylose_degradation_6	EMERGE	Emerge	D-xylonolactone->D-xylonate	False
 K25123	EMERGE	Wood_Ljungdahl_1	EMERGE	Emerge	carbon dioxide->formate	False
 K25124	EMERGE	Wood_Ljungdahl_1	EMERGE	Emerge	carbon dioxide->formate	False
+K10714	EMERGE	carbon_redox_6	EMERGE	Emerge	formaldehyde->formate	False
