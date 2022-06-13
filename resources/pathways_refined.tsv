@@ -40,13 +40,11 @@ fucose_degradation	1+2+3	all
 galacturonic_acid_degradation	1+2+3+4+5	all			
 glycerol_degradation	1+2+4	glycerol			
 glycerol_degradation	3+4	glycerone			
-hydrogenotrophic_methanogenesis	1+2+3+4+5+6+7+8,1+2+3+4+5+6+7+9	all			
-acetoclastic_methanogenesis	1+4+5+6+7,2+3+4+5+6+7,1+4+5+6+8,2+3+4+5+6+8	all			
-methylotrophic_methanogenesis	1+6+7+8,1+6+7+9	methanol	mtaA,mtaB,mtaC	K14080,K04480,K14081	
-methylotrophic_methanogenesis	2+6+7+8,2+6+7+9	methylamine	mtmA,mtmB,mtmC	K14082,K16176,K16177	
-methylotrophic_methanogenesis	3+6+7+8,3+6+7+9	dimethylamine	mtbA,mtbB,mtbC	K14082,K16178,K16179	
-methylotrophic_methanogenesis	4+6+7+8,4+6+7+9	trimethylamine	mttA,mttB,mttC	K14082,K14083,K14084	
-methylotrophic_methanogenesis	5+6+7+8,5+6+7+9	methanethiol	mtsA,mtsB	K16954,K16955	
+methanogenesis	1+2+3	common			
+hydrogenotrophic_methanogenesis	1+2+3+4+5+6+7+8	all			
+acetoclastic_methanogenesis	(1,2+3)+4+5+6+7+8	all			
+methylotrophic_methanogenesis	(1,2,3,4,5)+6+7	h2_dependent			
+methylotrophic_methanogenesis	(1,2,3,4,5)+6+7+8+9+10+11+12	h2_independent			
 Calvin_Benson	1+2+3+5+6+7+8+9+10+12	all			
 rTCA	1+4+6	all			
 Wood_Ljungdahl	1+2+5+7+9+11	acetogen	acsB,acsC,acsD	K14138,K00197,K00194	
