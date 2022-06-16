@@ -223,3 +223,4 @@ EMERGE220	glycerol->glycerol-3-P number:1	glycerol_degradation	K00864
 EMERGE221	glycerol-3-P->glycerone-P number:2	glycerol_degradation	(K00111+K00112+K00113),(K00057)
 EMERGE222	glycerone->glycerone-P number:3	glycerol_degradation	(K05878+K05879+K05881),(K00863)
 EMERGE223	glycerone-P->glyceraldehyde-3-P number:4	glycerol_degradation	K01803
+EMERGE224	polysulfide->sulfide number:15	sulfur_redox	K17993+K17994+K17995+K17996
