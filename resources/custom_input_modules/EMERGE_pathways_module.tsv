@@ -2,8 +2,8 @@ module_id	module_name	complex	definition
 EMERGE0	nitrate->nitrite number:1	nitrogen_redox	(K003700+K003710),(K02567+K02568)
 EMERGE1	nitrite->ammonium number:2	nitrogen_redox	(K00362+K00363),(K03385+K15876)
 EMERGE2	nitrite->nitric oxide number:3	nitrogen_redox	K00368,K15864
-EMERGE3	nitric oxide->dinitrogen number:4	nitrogen_redox	K04561
-EMERGE4	nitric oxide->nitrous oxide number:5	nitrogen_redox	(K04561+K02305),(K12264+K12265),(K05601+K11933)
+EMERGE3	nitric oxide->dinitrogen number:4	nitrogen_redox	K045611
+EMERGE4	nitric oxide->nitrous oxide number:5	nitrogen_redox	(K045610+K02305),(K12264+K12265),(K05601+K11933)
 EMERGE5	nitrous oxide->dinitrogen number:6	nitrogen_redox	K00376
 EMERGE6	dinitrogen->ammonium number:7	nitrogen_redox	(K02588+K02586+K02591+K02585+K02587+K02592+K15790+K04488),(K22899+K22898+K22896+K22897+K02585+K02592+K22903),(K02588+K00531+K02586+K02591+K02585+K04488)
 EMERGE7	ammonium/nitric oxide->hydrazine number:8	nitrogen_redox	K20932+K20933+K20934

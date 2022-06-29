@@ -240,7 +240,8 @@ K04072	EMERGE	ethanol_fermentation_3	EMERGE	Emerge	acetaldehyde->ethanol	False
 K04073	EMERGE	ethanol_fermentation_2	EMERGE	Emerge	acetyl-CoA->acetaldehyde	False
 K04480	EMERGE	methylotrophic_methanogenesis_1	EMERGE	Emerge	methanol->methyl-CoM	False
 K04488	EMERGE	nitrogen_redox_7	EMERGE	Emerge	dinitrogen->ammonium	False
-K04561	EMERGE	nitrogen_redox_5	EMERGE	Emerge	nitric oxide->nitrous oxide	False
+K045610	EMERGE	nitrogen_redox_5	EMERGE	Emerge	nitric oxide->nitrous oxide	False
+K045611	EMERGE	nitrogen_redox_4	EMERGE	Emerge	nitric oxide->dinitrogen	False
 K05299	EMERGE	Wood_Ljungdahl_1	EMERGE	Emerge	carbon dioxide->formate	False
 K05306	EMERGE	phosphorous_redox_9	EMERGE	Emerge	acetaldehyde-phosphonate->phosphate	False
 K05349	EMERGE	cellulose_degradation_3	EMERGE	Emerge	cellobiose->D-glucose	False
