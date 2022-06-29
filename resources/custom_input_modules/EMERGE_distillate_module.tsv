@@ -70,8 +70,10 @@ K00363	EMERGE	nitrogen_redox_17	EMERGE	Emerge	nitrite->ammonium	False
 K00366	EMERGE	nitrogen_redox_17	EMERGE	Emerge	nitrite->ammonium	False
 K00367	EMERGE	nitrogen_redox_16	EMERGE	Emerge	nitrate->nitrite	False
 K00368	EMERGE	nitrogen_redox_3	EMERGE	Emerge	nitrite->nitric oxide	False
-K00370	EMERGE	nitrogen_redox_13	EMERGE	Emerge	nitrite->nitrate	False
-K00371	EMERGE	nitrogen_redox_13	EMERGE	Emerge	nitrite->nitrate	False
+K003700	EMERGE	nitrogen_redox_1	EMERGE	Emerge	nitrate->nitrite	False
+K003701	EMERGE	nitrogen_redox_13	EMERGE	Emerge	nitrite->nitrate	False
+K003710	EMERGE	nitrogen_redox_1	EMERGE	Emerge	nitrate->nitrite	False
+K003711	EMERGE	nitrogen_redox_13	EMERGE	Emerge	nitrite->nitrate	False
 K00372	EMERGE	nitrogen_redox_16	EMERGE	Emerge	nitrate->nitrite	False
 K00376	EMERGE	nitrogen_redox_6	EMERGE	Emerge	nitrous oxide->dinitrogen	False
 K00380	EMERGE	sulfur_redox_8	EMERGE	Emerge	sulfite->sulfide	False

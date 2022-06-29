@@ -6,7 +6,7 @@ nitrogen_redox	8+9	anammox
 nitrogen_redox	10+11	ammonia_oxidation			
 nitrogen_redox	13	nitrite_oxidation			
 nitrogen_redox	14	nitric_oxide_oxidation			
-nitrogen_redox	10+11+13	comammox	(pmoC,pmoA,pmoB,hao)+(nxrA,nxrB)	(K10946,K10944,K10945,K10535)+(K00370,K00371)	
+nitrogen_redox	10+11+13	comammox	(pmoC,pmoA,pmoB,hao)+(nxrA,nxrB)	(K10946,K10944,K10945,K10535)+(K003701,K003711)	
 nitrogen_redox	16+17	assimilatory_nitrate_reduction			
 chemotaxis	1+2+3+4+5	all			
 flagella_assembly	1+2+3+4+5+6+7+8+9	all			
