@@ -42,9 +42,9 @@ glycerol_degradation	1+2+4	glycerol
 glycerol_degradation	3+4	glycerone			
 methanogenesis	1+2+3	common			
 hydrogenotrophic_methanogenesis	1+2+3+4+5+6+7+8	all			
-acetoclastic_methanogenesis	(1,2+3)+4+5+6+7+8	all			
-methylotrophic_methanogenesis	(1,2,3,4,5)+6+7	h2_dependent			
-methylotrophic_methanogenesis	(1,2,3,4,5)+6+7+8+9+10+11+12	h2_independent			
+acetoclastic_methanogenesis	1+4+5+6+7+8,2+3+4+5+6+7+8	all			
+methylotrophic_methanogenesis	1+6+7,2+6+7,3+6+7,4+6+7,5+6+7	h2_dependent			
+methylotrophic_methanogenesis	1+6+7+8+9+10+11+12,2+6+7+8+9+10+11+12,3+6+7+8+9+10+11+12,4+6+7+8+9+10+11+12,5+6+7+8+9+10+11+12	h2_independent			
 Calvin_Benson	1+2+3+5+6+7+8+9+10+12	all			
 rTCA	1+4+6	all			
 Wood_Ljungdahl	1+2+5+7+9+11	acetogen	acsB,acsC,acsD	K14138,K00197,K00194	
