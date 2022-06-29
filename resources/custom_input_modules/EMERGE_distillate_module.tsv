@@ -287,8 +287,10 @@ K10713	EMERGE	carbon_redox_5	EMERGE	Emerge	formaldehyde->5,10-methylene-THMPT	Fa
 K10944	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
 K10945	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
 K10946	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
-K11180	EMERGE	sulfur_redox_9	EMERGE	Emerge	sulfur->sulfite	False
-K11181	EMERGE	sulfur_redox_9	EMERGE	Emerge	sulfur->sulfite	False
+K111800	EMERGE	sulfur_redox_3	EMERGE	Emerge	sulfite->sulfide	False
+K111801	EMERGE	sulfur_redox_9	EMERGE	Emerge	sulfur->sulfite	False
+K111810	EMERGE	sulfur_redox_3	EMERGE	Emerge	sulfite->sulfide	False
+K111811	EMERGE	sulfur_redox_9	EMERGE	Emerge	sulfur->sulfite	False
 K11260	EMERGE	Wood_Ljungdahl_3	EMERGE	Emerge	carbon dioxide+MFR->formyl-MFR	False
 K11261	EMERGE	Wood_Ljungdahl_3	EMERGE	Emerge	carbon dioxide+MFR->formyl-MFR	False
 K11264	EMERGE	propionate_fermentation_8	EMERGE	Emerge	S-methylmalonyl-CoA->propionyl-CoA	False

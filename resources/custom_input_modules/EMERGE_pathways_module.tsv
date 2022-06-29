@@ -31,13 +31,13 @@ EMERGE28	hook->None number:8	flagella_assembly	K02390+K02397+K02396
 EMERGE29	filament->None number:9	flagella_assembly	K02406
 EMERGE30	sulfate->APS number:1	sulfur_redox	K00958,K00955
 EMERGE31	APS->sulfite number:2	sulfur_redox	K00394+K00395
-EMERGE32	sulfite->sulfide number:3	sulfur_redox	K11180+K11181+K23077
+EMERGE32	sulfite->sulfide number:3	sulfur_redox	K111800+K111810+K23077
 EMERGE33	tetrathionate->thiosulfate number:4	sulfur_redox	K08357+K08358+K08359
 EMERGE34	thiosulfate->sulfide number:5	sulfur_redox	K08352+K08353+K08354
 EMERGE35	APS->PAPS number:6	sulfur_redox	K00860,K00955
 EMERGE36	PAPS->sulfite number:7	sulfur_redox	K00390
 EMERGE37	sulfite->sulfide number:8	sulfur_redox	(K00380+K00381),K00392
-EMERGE38	sulfur->sulfite number:9	sulfur_redox	K11180+K11181+K23077
+EMERGE38	sulfur->sulfite number:9	sulfur_redox	K111801+K111811+K23077
 EMERGE39	thiosulfate->sulfur number:10	sulfur_redox	(K17222+K17223+K17224+K17225+K17226+K17227+K22622),(K17224+K17226+K17227),(K17223+K17226+K17227),(K17224+K17225+K22622)
 EMERGE40	sulfide->sulfur number:11	sulfur_redox	K17218
 EMERGE41	sulfide->sulfur number:12	sulfur_redox	K17229+K17230
