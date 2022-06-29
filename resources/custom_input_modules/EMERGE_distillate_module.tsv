@@ -286,9 +286,12 @@ K10670	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
 K10671	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
 K10672	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
 K10713	EMERGE	carbon_redox_5	EMERGE	Emerge	formaldehyde->5,10-methylene-THMPT	False
-K10944	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
-K10945	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
-K10946	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
+K109440	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
+K109450	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
+K109460	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
+K109441	EMERGE	nitrogen_redox_10	EMERGE	Emerge	ammonium->hydroxylamine	False
+K109451	EMERGE	nitrogen_redox_10	EMERGE	Emerge	ammonium->hydroxylamine	False
+K109461	EMERGE	nitrogen_redox_10	EMERGE	Emerge	ammonium->hydroxylamine	False
 K111800	EMERGE	sulfur_redox_3	EMERGE	Emerge	sulfite->sulfide	False
 K111801	EMERGE	sulfur_redox_9	EMERGE	Emerge	sulfur->sulfite	False
 K111810	EMERGE	sulfur_redox_3	EMERGE	Emerge	sulfite->sulfide	False
