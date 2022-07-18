@@ -21,7 +21,6 @@ K00121	EMERGE	ethanol_fermentation_3	EMERGE	Emerge	acetaldehyde->ethanol	False
 K00122	EMERGE	carbon_redox_7	EMERGE	Emerge	formate->carbon dioxide	False
 K00123	EMERGE	carbon_redox_7	EMERGE	Emerge	formate->carbon dioxide	False
 K00124	EMERGE	carbon_redox_7	EMERGE	Emerge	formate->carbon dioxide	False
-K00125	EMERGE	methylotrophic_methanogenesis_9	EMERGE	Emerge	CoM-S-S-CoB->CoM+CoB	False
 K00127	EMERGE	carbon_redox_7	EMERGE	Emerge	formate->carbon dioxide	False
 K00132	EMERGE	ethanol_fermentation_2	EMERGE	Emerge	acetyl-CoA->acetaldehyde	False
 K00134	EMERGE	Calvin_Benson_3	EMERGE	Emerge	glycerate-1,3-bis-P->glyceraldehyde-3-P	False
@@ -71,8 +70,10 @@ K00363	EMERGE	nitrogen_redox_17	EMERGE	Emerge	nitrite->ammonium	False
 K00366	EMERGE	nitrogen_redox_17	EMERGE	Emerge	nitrite->ammonium	False
 K00367	EMERGE	nitrogen_redox_16	EMERGE	Emerge	nitrate->nitrite	False
 K00368	EMERGE	nitrogen_redox_3	EMERGE	Emerge	nitrite->nitric oxide	False
-K00370	EMERGE	nitrogen_redox_13	EMERGE	Emerge	nitrite->nitrate	False
-K00371	EMERGE	nitrogen_redox_13	EMERGE	Emerge	nitrite->nitrate	False
+K003700	EMERGE	nitrogen_redox_1	EMERGE	Emerge	nitrate->nitrite	False
+K003701	EMERGE	nitrogen_redox_13	EMERGE	Emerge	nitrite->nitrate	False
+K003710	EMERGE	nitrogen_redox_1	EMERGE	Emerge	nitrate->nitrite	False
+K003711	EMERGE	nitrogen_redox_13	EMERGE	Emerge	nitrite->nitrate	False
 K00372	EMERGE	nitrogen_redox_16	EMERGE	Emerge	nitrate->nitrite	False
 K00376	EMERGE	nitrogen_redox_6	EMERGE	Emerge	nitrous oxide->dinitrogen	False
 K00380	EMERGE	sulfur_redox_8	EMERGE	Emerge	sulfite->sulfide	False
@@ -239,7 +240,8 @@ K04072	EMERGE	ethanol_fermentation_3	EMERGE	Emerge	acetaldehyde->ethanol	False
 K04073	EMERGE	ethanol_fermentation_2	EMERGE	Emerge	acetyl-CoA->acetaldehyde	False
 K04480	EMERGE	methylotrophic_methanogenesis_1	EMERGE	Emerge	methanol->methyl-CoM	False
 K04488	EMERGE	nitrogen_redox_7	EMERGE	Emerge	dinitrogen->ammonium	False
-K04561	EMERGE	nitrogen_redox_5	EMERGE	Emerge	nitric oxide->nitrous oxide	False
+K045610	EMERGE	nitrogen_redox_5	EMERGE	Emerge	nitric oxide->nitrous oxide	False
+K045611	EMERGE	nitrogen_redox_4	EMERGE	Emerge	nitric oxide->dinitrogen	False
 K05299	EMERGE	Wood_Ljungdahl_1	EMERGE	Emerge	carbon dioxide->formate	False
 K05306	EMERGE	phosphorous_redox_9	EMERGE	Emerge	acetaldehyde-phosphonate->phosphate	False
 K05349	EMERGE	cellulose_degradation_3	EMERGE	Emerge	cellobiose->D-glucose	False
@@ -285,11 +287,16 @@ K10670	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
 K10671	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
 K10672	EMERGE	reductive_glycine_7	EMERGE	Emerge	glycine->acetyl-P+ammonium	False
 K10713	EMERGE	carbon_redox_5	EMERGE	Emerge	formaldehyde->5,10-methylene-THMPT	False
-K10944	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
-K10945	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
-K10946	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
-K11180	EMERGE	sulfur_redox_9	EMERGE	Emerge	sulfur->sulfite	False
-K11181	EMERGE	sulfur_redox_9	EMERGE	Emerge	sulfur->sulfite	False
+K109440	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
+K109450	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
+K109460	EMERGE	carbon_redox_3	EMERGE	Emerge	methane->methanol	False
+K109441	EMERGE	nitrogen_redox_10	EMERGE	Emerge	ammonium->hydroxylamine	False
+K109451	EMERGE	nitrogen_redox_10	EMERGE	Emerge	ammonium->hydroxylamine	False
+K109461	EMERGE	nitrogen_redox_10	EMERGE	Emerge	ammonium->hydroxylamine	False
+K111800	EMERGE	sulfur_redox_3	EMERGE	Emerge	sulfite->sulfide	False
+K111801	EMERGE	sulfur_redox_9	EMERGE	Emerge	sulfur->sulfite	False
+K111810	EMERGE	sulfur_redox_3	EMERGE	Emerge	sulfite->sulfide	False
+K111811	EMERGE	sulfur_redox_9	EMERGE	Emerge	sulfur->sulfite	False
 K11260	EMERGE	Wood_Ljungdahl_3	EMERGE	Emerge	carbon dioxide+MFR->formyl-MFR	False
 K11261	EMERGE	Wood_Ljungdahl_3	EMERGE	Emerge	carbon dioxide+MFR->formyl-MFR	False
 K11264	EMERGE	propionate_fermentation_8	EMERGE	Emerge	S-methylmalonyl-CoA->propionyl-CoA	False
@@ -315,9 +322,6 @@ K14081	EMERGE	methylotrophic_methanogenesis_1	EMERGE	Emerge	methanol->methyl-CoM
 K14082	EMERGE	methylotrophic_methanogenesis_4	EMERGE	Emerge	trimethylamine->methyl-CoM	False
 K14083	EMERGE	methylotrophic_methanogenesis_4	EMERGE	Emerge	trimethylamine->methyl-CoM	False
 K14084	EMERGE	methylotrophic_methanogenesis_4	EMERGE	Emerge	trimethylamine->methyl-CoM	False
-K14126	EMERGE	methylotrophic_methanogenesis_9	EMERGE	Emerge	CoM-S-S-CoB->CoM+CoB	False
-K14127	EMERGE	methylotrophic_methanogenesis_9	EMERGE	Emerge	CoM-S-S-CoB->CoM+CoB	False
-K14128	EMERGE	methylotrophic_methanogenesis_9	EMERGE	Emerge	CoM-S-S-CoB->CoM+CoB	False
 K14138	EMERGE	Wood_Ljungdahl_11	EMERGE	Emerge	5_methyl_H4MPT->H4MPT+acetyl_CoA	False
 K14273	EMERGE	xylose_degradation_5	EMERGE	Emerge	D-xylose->D-xylonolactone	False
 K14274	EMERGE	xylose_degradation_6	EMERGE	Emerge	D-xylonolactone->D-xylonate	False
@@ -413,7 +417,6 @@ K22480	EMERGE	methylotrophic_methanogenesis_8	EMERGE	Emerge	CoM-S-S-CoB->CoM+CoB
 K22481	EMERGE	methylotrophic_methanogenesis_8	EMERGE	Emerge	CoM-S-S-CoB->CoM+CoB	False
 K22482	EMERGE	methylotrophic_methanogenesis_8	EMERGE	Emerge	CoM-S-S-CoB->CoM+CoB	False
 K22515	EMERGE	carbon_redox_7	EMERGE	Emerge	formate->carbon dioxide	False
-K22516	EMERGE	methylotrophic_methanogenesis_9	EMERGE	Emerge	CoM-S-S-CoB->CoM+CoB	False
 K22622	EMERGE	sulfur_redox_10	EMERGE	Emerge	thiosulfate->sulfur	False
 K22896	EMERGE	nitrogen_redox_7	EMERGE	Emerge	dinitrogen->ammonium	False
 K22897	EMERGE	nitrogen_redox_7	EMERGE	Emerge	dinitrogen->ammonium	False
@@ -429,3 +432,8 @@ K24442	EMERGE	xylose_degradation_5	EMERGE	Emerge	D-xylose->D-xylonolactone	False
 K24443	EMERGE	xylose_degradation_6	EMERGE	Emerge	D-xylonolactone->D-xylonate	False
 K25123	EMERGE	Wood_Ljungdahl_1	EMERGE	Emerge	carbon dioxide->formate	False
 K25124	EMERGE	Wood_Ljungdahl_1	EMERGE	Emerge	carbon dioxide->formate	False
+K10714	EMERGE	carbon_redox_6	EMERGE	Emerge	formaldehyde->formate	False
+K17993	EMERGE	sulfur_redox_15	EMERGE	Emerge	polysulfide->sulfide	False
+K17994	EMERGE	sulfur_redox_15	EMERGE	Emerge	polysulfide->sulfide	False
+K17995	EMERGE	sulfur_redox_15	EMERGE	Emerge	polysulfide->sulfide	False
+K17996	EMERGE	sulfur_redox_15	EMERGE	Emerge	polysulfide->sulfide	False

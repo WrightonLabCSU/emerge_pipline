@@ -6,7 +6,7 @@ nitrogen_redox	8+9	anammox
 nitrogen_redox	10+11	ammonia_oxidation			
 nitrogen_redox	13	nitrite_oxidation			
 nitrogen_redox	14	nitric_oxide_oxidation			
-nitrogen_redox	10+11+13	comammox	(pmoC,pmoA,pmoB,hao)+(nxrA,nxrB)	(K10946,K10944,K10945,K10535)+(K00370,K00371)	
+nitrogen_redox	10+11+13	comammox	(amoC,amoA,amoB,hao)+(nxrA,nxrB)	(K109461,K109441,K109451,K10535)+(K003701,K003711)	
 nitrogen_redox	16+17	assimilatory_nitrate_reduction			
 chemotaxis	1+2+3+4+5	all			
 flagella_assembly	1+2+3+4+5+6+7+8+9	all			
@@ -40,16 +40,15 @@ fucose_degradation	1+2+3	all
 galacturonic_acid_degradation	1+2+3+4+5	all			
 glycerol_degradation	1+2+4	glycerol			
 glycerol_degradation	3+4	glycerone			
-hydrogenotrophic_methanogenesis	1+2+3+4+5+6+7+8,1+2+3+4+5+6+7+9	all			
-acetoclastic_methanogenesis	1+4+5+6+7,2+3+4+5+6+7,1+4+5+6+8,2+3+4+5+6+8	all			
-methylotrophic_methanogenesis	1+6+7+8,1+6+7+9	methanol	mtaA,mtaB,mtaC	K14080,K04480,K14081	
-methylotrophic_methanogenesis	2+6+7+8,2+6+7+9	methylamine	mtmA,mtmB,mtmC	K14082,K16176,K16177	
-methylotrophic_methanogenesis	3+6+7+8,3+6+7+9	dimethylamine	mtbA,mtbB,mtbC	K14082,K16178,K16179	
-methylotrophic_methanogenesis	4+6+7+8,4+6+7+9	trimethylamine	mttA,mttB,mttC	K14082,K14083,K14084	
-methylotrophic_methanogenesis	5+6+7+8,5+6+7+9	methanethiol	mtsA,mtsB	K16954,K16955	
+methanogenesis	1+2+3	common			
+hydrogenotrophic_methanogenesis	1+2+3+4+5+6+7+8	all			
+acetoclastic_methanogenesis	1+4+5+6+7+8,2+3+4+5+6+7+8	all			
+methylotrophic_methanogenesis	1+6+7,2+6+7,3+6+7,4+6+7,5+6+7	h2_dependent			
+methylotrophic_methanogenesis	1+6+7+8+9+10+11+12,2+6+7+8+9+10+11+12,3+6+7+8+9+10+11+12,4+6+7+8+9+10+11+12,5+6+7+8+9+10+11+12	h2_independent			
 Calvin_Benson	1+2+3+5+6+7+8+9+10+12	all			
 rTCA	1+4+6	all			
-Wood_Ljungdahl	1+2+5+7+9+11,3+4+6+8+10+11	all	acsB,acsC,acsD	K14138,K00197,K00194	
+Wood_Ljungdahl	1+2+5+7+9+11	acetogen	acsB,acsC,acsD	K14138,K00197,K00194	
+Wood_Ljungdahl	3+4+6+8+10+11	methanogen	acsB,acsC,acsD	K14138,K00197,K00194	
 Fuchs_Holo	1+2+3+4+5+6+7+10+11+12+13	all			
 HPHB_DCHB	1+2+6+16+17+18+19+20+21+22	DCHB			
 HPHB_DCHB	8+9+10+11+12+13+14+15+16+17+18+19+20+21+22	HPHB	accA,accD,accB,accD6	K01962,K01963,K02160,K18472	
