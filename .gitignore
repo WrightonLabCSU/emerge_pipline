@@ -1,4 +1,4 @@
 .snakemake/
 __pycache__/
 
-results/
+results*/
